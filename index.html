@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Enthusiast</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#facts">Panda Facts</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="bouncing-panda">
+                <div class="panda">
+                    <div class="ears">
+                        <div class="ear"></div>
+                        <div class="ear"></div>
+                    </div>
+                    <div class="face">
+                        <div class="eyes">
+                            <div class="eye"></div>
+                            <div class="eye"></div>
+                        </div>
+                        <div class="nose"></div>
+                    </div>
+                </div>
+            </div>
+            <h1>Welcome to Panda Enthusiast</h1>
+            <p>Discover the wonderful world of giant pandas!</p>
+        </section>
+
+        <section id="facts" class="facts-section">
+            <h2>Fascinating Panda Facts</h2>
+            <div class="fact-cards">
+                <div class="fact-card">
+                    <h3>Diet</h3>
+                    <p>Pandas eat 20-40 pounds of bamboo per day!</p>
+                </div>
+                <div class="fact-card">
+                    <h3>Habitat</h3>
+                    <p>Giant pandas live in temperate broadleaf and mixed forests in the mountains of southwest China.</p>
+                </div>
+                <div class="fact-card">
+                    <h3>Conservation Status</h3>
+                    <p>While still vulnerable, pandas have been upgraded from "endangered" thanks to conservation efforts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery-section">
+            <h2>Panda Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/400x300/?panda" alt="Panda 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/400x300/?giant-panda" alt="Panda 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/400x300/?panda-bear" alt="Panda 3">
+                </div>
+            </div>
+        </section>
+
+        <section id="game" class="game-section">
+            <h2>Play Flappy Panda!</h2>
+            <div class="game-container">
+                <canvas id="gameCanvas"></canvas>
+                <div class="game-controls">
+                    <button id="startButton">Start Game</button>
+                    <p>Score: <span id="score">0</span></p>
+                    <p class="game-instructions">Press SPACE to make the panda jump!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About This Site</h2>
+            <p>Welcome to Panda Enthusiast! This website is dedicated to sharing knowledge and appreciation for giant pandas. As a panda enthusiast, I created this site to help others learn about these amazing creatures.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Panda Enthusiast. All rights reserved.</p>
+    </footer>
+    <script src="game.js"></script>
+</body>
+</html>

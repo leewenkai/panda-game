@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #4a4a4a;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #90EE90;
+}
+
+/* Update hero section to accommodate the panda */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://source.unsplash.com/1600x900/?bamboo-forest');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    padding-top: 6rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+.facts-section {
+    background-color: #f5f5f5;
+}
+
+.fact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.fact-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.fact-card h3 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    text-align: center;
+    color: #2c5530;
+    margin-bottom: 2rem;
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #4a4a4a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Animated Panda Styles */
+.bouncing-panda {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem auto;
+    animation: bounce 2s infinite;
+}
+
+.panda {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ears {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10%;
+}
+
+.ear {
+    width: 50px;
+    height: 50px;
+    background: #333;
+    border-radius: 50%;
+}
+
+.face {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    background: white;
+    border-radius: 50%;
+    margin: -25px auto 0;
+    border: 4px solid #333;
+}
+
+.eyes {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 45px;
+}
+
+.eye {
+    width: 35px;
+    height: 45px;
+    background: #333;
+    border-radius: 50%;
+    position: relative;
+}
+
+.eye::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+}
+
+.nose {
+    width: 25px;
+    height: 15px;
+    background: #333;
+    border-radius: 20px;
+    margin: 15px auto 0;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Game Section Styles */
+.game-section {
+    background-color: #f0f8ff;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-container {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+#gameCanvas {
+    background: #87CEEB;
+    border: 2px solid #333;
+    width: 400px;
+    height: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
+.game-controls {
+    margin-top: 1rem;
+}
+
+#startButton {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+#startButton:hover {
+    background: #45a049;
+}
+
+.game-instructions {
+    margin-top: 1rem;
+    color: #666;
+    font-style: italic;
+}
